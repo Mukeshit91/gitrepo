@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: environments
+spec: 
+  containers:
+  - name: c00
+    image: ubuntu
+    command: ["/bin/bash", "-c", "while true; do echo first-container; sleep 5; done"]
+    env:
+      - name: java_home
+        value: /tmp/java/jre
